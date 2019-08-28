@@ -1,0 +1,52 @@
+﻿<h3>Lista de Colaboradores</h3>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>#</th>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @{
+            foreach (var item in (List<ColaboradorModel>)ViewBag.ListaColaboradores)
+            {
+                <tr>
+                    <td><button type="button" class="btn btn-warning" onclick="Editar(@item.Id)">Editar</button></td>
+                    <td><button type="button" class="btn btn-danger" onclick="Excluir(@item.Id)">Excluir</button></td>
+                    <td>@item.Id</td>
+                    <td>@item.Nome</td>
+                    <td>@item.CPF</td>
+                    <td>@item.Email</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<br />
+<button class="btn btn-block btn-primary" type="button" onclick="Cadastrar()">Cadastrar Colaborador</button>
+
+<script>
+
+    function Cadastrar()
+    {
+        window.location.href = "../Colaborador/Cadastro";
+    }
+
+    function Editar(id)
+    {
+        window.location.href = "../Colaborador/Cadastro/" + id;
+    }
+
+    function Excluir(id)
+    {
+        window.location.href = "../Colaborador/Excluir/" + id;
+    }
+
+</script>

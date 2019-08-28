@@ -1,0 +1,436 @@
+﻿<br />
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-4">
+            <a class="btn btn-success btn-lg" onclick="Cadastrar()">
+                <span class="glyphicon glyphicon-plus"></span>
+            </a>
+        </div>
+
+        <div class="col-sm-6">
+            <h1 style="margin-top: 5px;">Total de Projetos: @Html.Raw(ViewBag.TotalProjetos)</h1>
+        </div>
+        
+    </div>
+</div>
+
+<br />
+
+<!-- <table class="table">
+    <thead>
+
+        <tr>
+            @{
+                foreach (var item in (List<EtapaModel>)ViewBag.ListaEtapas)
+                {
+
+                    <th>@item.Nome</th>
+
+                }
+            }
+        </tr>
+    </thead>
+        
+    <tbody>
+
+        <tr>
+            @{
+                foreach (var item in (List<ProjetoModel>)ViewBag.PreVenda)
+                {
+                    <td>
+                        <button type="button" class="btn" style="background-color: #A52A2A; color: white; text-align: left;"
+                                onclick="Editar(@item.Id)">
+                            @item.Cliente_Id<br />@item.Nome
+                        </button>
+                    </td>
+                }
+            }
+
+            @{
+                foreach (var item in (List<ProjetoModel>)ViewBag.Proposta)
+                {
+                    <td>
+                        <button type="button" class="btn" style="background-color: #B22222; color: white; text-align: left;"
+                                onclick="Editar(@item.Id)">
+                            @item.Cliente_Id<br />@item.Nome
+                        </button>
+                    </td>
+                }
+            }
+
+            @{
+                foreach (var item in (List<ProjetoModel>)ViewBag.Negociacao)
+                {
+                    <td>
+                        <button type="button" class="btn" style="background-color: #FFA07A; color: white; text-align: left;"
+                                onclick="Editar(@item.Id)">
+                            @item.Cliente_Id<br />@item.Nome
+                        </button>
+                    </td>
+                }
+            }
+
+            @{
+                foreach (var item in (List<ProjetoModel>)ViewBag.Fechamento)
+                {
+                    <td>
+                        <button type="button" class="btn" style="background-color: #BA55D3; color: white; text-align: left;"
+                                onclick="Editar(@item.Id)">
+                            @item.Cliente_Id<br />@item.Nome
+                        </button>
+                    </td>
+                }
+            }
+
+            @{
+                foreach (var item in (List<ProjetoModel>)ViewBag.Producao)
+                {
+                    <td>
+                        <button type="button" class="btn" style="background-color: #4169E1; color: white; text-align: left;"
+                                onclick="Editar(@item.Id)">
+                            @item.Cliente_Id<br />@item.Nome
+                        </button>
+                    </td>
+                }
+            }
+
+            @{
+                foreach (var item in (List<ProjetoModel>)ViewBag.Entrega)
+                {
+                    <td>
+                        <button type="button" class="btn" style="background-color: #191970; color: white; text-align: left;"
+                                onclick="Editar(@item.Id)">
+                            @item.Cliente_Id<br />@item.Nome
+                        </button>
+                    </td>
+                }
+            }
+        </tr>        
+
+    </tbody>
+
+</table> -->
+<div class="row">
+    
+    <div class="col-md-2" style="width: 180px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    @{
+                        foreach (var item in (List<EtapaModel>)ViewBag.ListaEtapas)
+                        {
+
+                            if(@item.Nome == "PRÉ VENDA")
+                            {
+                                <th>@item.Nome</th>
+                            }                
+
+                        }
+                    }
+                </tr>
+            </thead>
+                
+            <tbody>
+                @{
+                    foreach (var item in (List<ProjetoModel>)ViewBag.PreVenda)
+                    {
+                        <tr>
+                            <td>
+                                <button type="button" class="btn" style="background-color: #A52A2A; color: white; text-align: left; width: 170px;"
+                                        onclick="Editar(@item.Id)">
+                                    @item.Cliente_Id<br />@item.Nome
+                                </button>
+                            </td>
+                        </tr> 
+                    }
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+    <div class="col-md-2" style="width: 180px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    @{
+                        foreach (var item in (List<EtapaModel>)ViewBag.ListaEtapas)
+                        {
+
+                            if(@item.Nome == "PROPOSTA")
+                            {
+                                <th>@item.Nome</th>
+                            }                
+
+                        }
+                    }
+                </tr>
+            </thead>
+                
+            <tbody>
+                @{
+                    foreach (var item in (List<ProjetoModel>)ViewBag.Proposta)
+                    {
+                        <tr>
+                            <td>
+                                <button type="button" class="btn" style="background-color: #B22222; color: white; text-align: left; width: 170px;"
+                                        onclick="Editar(@item.Id)">
+                                    @item.Cliente_Id<br />@item.Nome
+                                </button>
+                            </td>
+                        </tr> 
+                    }
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+    <div class="col-md-2" style="width: 180px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    @{
+                        foreach (var item in (List<EtapaModel>)ViewBag.ListaEtapas)
+                        {
+
+                            if(@item.Nome == "NEGOCIAÇÃO")
+                            {
+                                <th>@item.Nome</th>
+                            }                
+
+                        }
+                    }
+                </tr>
+            </thead>
+                
+            <tbody>
+                @{
+                    foreach (var item in (List<ProjetoModel>)ViewBag.Negociacao)
+                    {
+                        <tr>
+                            <td>
+                                <button type="button" class="btn" style="background-color: #FFA07A; color: white; text-align: left; width: 170px;"
+                                        onclick="Editar(@item.Id)">
+                                    @item.Cliente_Id<br />@item.Nome
+                                </button>
+                            </td>
+                        </tr> 
+                    }
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+    <div class="col-md-2" style="width: 180px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    @{
+                        foreach (var item in (List<EtapaModel>)ViewBag.ListaEtapas)
+                        {
+
+                            if(@item.Nome == "FECHAMENTO")
+                            {
+                                <th>@item.Nome</th>
+                            }                
+
+                        }
+                    }
+                </tr>
+            </thead>
+                
+            <tbody>
+                @{
+                    foreach (var item in (List<ProjetoModel>)ViewBag.Fechamento)
+                    {
+                        <tr>
+                            <td>
+                                <button type="button" class="btn" style="background-color: #BA55D3; color: white; text-align: left; width: 170px;"
+                                        onclick="Editar(@item.Id)">
+                                    @item.Cliente_Id<br />@item.Nome
+                                </button>
+                            </td>
+                        </tr> 
+                    }
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+    <div class="col-md-2" style="width: 180px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    @{
+                        foreach (var item in (List<EtapaModel>)ViewBag.ListaEtapas)
+                        {
+
+                            if(@item.Nome == "PRODUÇÃO")
+                            {
+                                <th>@item.Nome</th>
+                            }                
+
+                        }
+                    }
+                </tr>
+            </thead>
+                
+            <tbody>
+                @{
+                    foreach (var item in (List<ProjetoModel>)ViewBag.Producao)
+                    {
+                        <tr>
+                            <td>
+                                <button type="button" class="btn" style="background-color: #4169E1; color: white; text-align: left; width: 170px;"
+                                        onclick="Editar(@item.Id)">
+                                    @item.Cliente_Id<br />@item.Nome
+                                </button>
+                            </td>
+                        </tr> 
+                    }
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+    <div class="col-md-2" style="width: 180px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    @{
+                        foreach (var item in (List<EtapaModel>)ViewBag.ListaEtapas)
+                        {
+
+                            if(@item.Nome == "ENTREGA")
+                            {
+                                <th>@item.Nome</th>
+                            }                
+
+                        }
+                    }
+                </tr>
+            </thead>
+                
+            <tbody>
+                @{
+                    foreach (var item in (List<ProjetoModel>)ViewBag.Entrega)
+                    {
+                        <tr>
+                            <td>
+                                <button type="button" class="btn" style="background-color: #191970; color: white; text-align: left; width: 170px;"
+                                        onclick="Editar(@item.Id)">
+                                    @item.Cliente_Id<br />@item.Nome
+                                </button>
+                            </td>
+                        </tr> 
+                    }
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+<!-- <table class="table">
+    <thead>
+
+        <tr>
+            @{
+                foreach (var item in (List<EtapaModel>)ViewBag.ListaEtapas)
+                {
+
+                    <th>@item.Nome</th>
+
+                }
+            }
+        </tr>
+    </thead>
+        
+    <tbody>
+
+        <tr>
+            @{
+                foreach (var item in (List<ProjetoModel>)ViewBag.PreVenda)
+                {
+                    <td>
+                        <button type="button" class="btn" style="background-color: #A52A2A; color: white; text-align: left;"
+                                onclick="Editar(@item.Id)">
+                            @item.Cliente_Id<br />@item.Nome
+                        </button>
+                    </td>
+                }
+            }
+
+            @{
+                foreach (var item in (List<ProjetoModel>)ViewBag.Proposta)
+                {
+                    <td>
+                        <button type="button" class="btn" style="background-color: #B22222; color: white; text-align: left;"
+                                onclick="Editar(@item.Id)">
+                            @item.Cliente_Id<br />@item.Nome
+                        </button>
+                    </td>
+                }
+            }
+
+            @{
+                foreach (var item in (List<ProjetoModel>)ViewBag.Negociacao)
+                {
+                    <td>
+                        <button type="button" class="btn" style="background-color: #FFA07A; color: white; text-align: left;"
+                                onclick="Editar(@item.Id)">
+                            @item.Cliente_Id<br />@item.Nome
+                        </button>
+                    </td>
+                }
+            }
+
+            @{
+                foreach (var item in (List<ProjetoModel>)ViewBag.Fechamento)
+                {
+                    <td>
+                        <button type="button" class="btn" style="background-color: #BA55D3; color: white; text-align: left;"
+                                onclick="Editar(@item.Id)">
+                            @item.Cliente_Id<br />@item.Nome
+                        </button>
+                    </td>
+                }
+            }
+
+            @{
+                foreach (var item in (List<ProjetoModel>)ViewBag.Producao)
+                {
+                    <td>
+                        <button type="button" class="btn" style="background-color: #4169E1; color: white; text-align: left;"
+                                onclick="Editar(@item.Id)">
+                            @item.Cliente_Id<br />@item.Nome
+                        </button>
+                    </td>
+                }
+            }
+
+            @{
+                foreach (var item in (List<ProjetoModel>)ViewBag.Entrega)
+                {
+                    <td>
+                        <button type="button" class="btn" style="background-color: #191970; color: white; text-align: left;"
+                                onclick="Editar(@item.Id)">
+                            @item.Cliente_Id<br />@item.Nome
+                        </button>
+                    </td>
+                }
+            }
+        </tr>        
+
+    </tbody>
+
+</table> -->
+
+<script src="~/js/Projeto/Layout.js"></script>

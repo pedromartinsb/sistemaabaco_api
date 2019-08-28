@@ -1,0 +1,14 @@
+C:\Users\Pedro\sistemaabaco_api\ApiSistemaAbaco\bin\Debug\netcoreapp2.2\ApiSistemaAbaco.deps.json
+C:\Users\Pedro\sistemaabaco_api\ApiSistemaAbaco\bin\Debug\netcoreapp2.2\ApiSistemaAbaco.runtimeconfig.json
+C:\Users\Pedro\sistemaabaco_api\ApiSistemaAbaco\bin\Debug\netcoreapp2.2\ApiSistemaAbaco.runtimeconfig.dev.json
+C:\Users\Pedro\sistemaabaco_api\ApiSistemaAbaco\bin\Debug\netcoreapp2.2\ApiSistemaAbaco.dll
+C:\Users\Pedro\sistemaabaco_api\ApiSistemaAbaco\bin\Debug\netcoreapp2.2\ApiSistemaAbaco.pdb
+C:\Users\Pedro\sistemaabaco_api\ApiSistemaAbaco\obj\Debug\netcoreapp2.2\ApiSistemaAbaco.csprojAssemblyReference.cache
+C:\Users\Pedro\sistemaabaco_api\ApiSistemaAbaco\obj\Debug\netcoreapp2.2\ApiSistemaAbaco.csproj.CoreCompileInputs.cache
+C:\Users\Pedro\sistemaabaco_api\ApiSistemaAbaco\obj\Debug\netcoreapp2.2\ApiSistemaAbaco.RazorAssemblyInfo.cache
+C:\Users\Pedro\sistemaabaco_api\ApiSistemaAbaco\obj\Debug\netcoreapp2.2\ApiSistemaAbaco.RazorAssemblyInfo.cs
+C:\Users\Pedro\sistemaabaco_api\ApiSistemaAbaco\obj\Debug\netcoreapp2.2\ApiSistemaAbaco.AssemblyInfoInputs.cache
+C:\Users\Pedro\sistemaabaco_api\ApiSistemaAbaco\obj\Debug\netcoreapp2.2\ApiSistemaAbaco.AssemblyInfo.cs
+C:\Users\Pedro\sistemaabaco_api\ApiSistemaAbaco\obj\Debug\netcoreapp2.2\ApiSistemaAbaco.RazorTargetAssemblyInfo.cache
+C:\Users\Pedro\sistemaabaco_api\ApiSistemaAbaco\obj\Debug\netcoreapp2.2\ApiSistemaAbaco.dll
+C:\Users\Pedro\sistemaabaco_api\ApiSistemaAbaco\obj\Debug\netcoreapp2.2\ApiSistemaAbaco.pdb
